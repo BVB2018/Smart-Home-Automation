@@ -1,0 +1,4 @@
+#Thu Dec 08 19:59:56 IST 2016
+base.0=C\:\\Users\\john\\AndroidStudioProjects\\AndroidLoginAndRegistration\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=C\:\\Users\\john\\AndroidStudioProjects\\AndroidLoginAndRegistration\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

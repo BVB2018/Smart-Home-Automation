@@ -1,0 +1,46 @@
+// You may want to be more specific in your imports
+    import java.util.*;
+    import com.twilio.sdk.*;
+    import com.twilio.sdk.resource.factory.*;
+    import com.twilio.sdk.resource.instance.*;
+    import com.twilio.sdk.resource.list.*;
+
+    public class TwilioTest {
+        // Find your Account Sid and Token at twilio.com/user/account
+        public static final String ACCOUNT_SID = "<AccountSid>";
+        public static final String AUTH_TOKEN = "<AuthToken>";
+
+        public static void main(String[] args) throws TwilioRestException {
+            TwilioRestClient client = new TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN);
+
+            // Build the parameters
+            List<NameValuePair> params = new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("To", "<ToNumber>"));
+            params.add(new BasicNameValuePair("From", "<FromNumber>"));
+            params.add(new BasicNameValuePair("Body", "<BodyText>"));
+
+            MessageFactory messageFactory = client.getAccount().getMessageFactory();
+            Message message = messageFactory.create(params);
+            System.out.println(message.getSid());
+        }
+    }
+     
+
+
+
+
+
+
+// this line loads the library require('/path/to/twilio-php/Services/Twilio.php');
+
+    $account_sid = '<AccountSid>';
+    $auth_token = '<AuthToken>';
+    $client = new Services_Twilio($account_sid, $auth_token);
+
+    $client->account->messages->create(
+        array(
+            'To' => '<ToNumber>',
+            'From' => '<FromNumber>',
+            'Body' => '<BodyText>',
+        )
+    );	 
